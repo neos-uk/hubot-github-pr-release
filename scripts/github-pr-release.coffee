@@ -34,7 +34,7 @@ doRelease = (owner, repo, msg) ->
   release(_.extend({owner: owner, repo: repo}, config.core))
     .then (pr) ->
       msg.send "Created release PR for #{owner}/#{repo}: #{pr.html_url}"
-      msg.send "⚠️📕Please fill in deploy log - https://retrofi.atlassian.net/wiki/spaces/TECH/pages/2273280123/Deploy+Log"
+      msg.send "⚠️  Please fill in deploy log 📕 - https://retrofi.atlassian.net/wiki/spaces/TECH/pages/2273280123/Deploy+Log"
     .catch (err) ->
       msg.send "Error: #{err.message}"
 
